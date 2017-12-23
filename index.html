@@ -2,68 +2,250 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
-	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-	    <meta name="viewport" content="width=device-width, initial-scale=1">
-		<link href='https://fonts.googleapis.com/css?family=Quattrocento' rel='stylesheet' type='text/css'>
-		<link rel="icon" type="image/png" sizes="192x192"  href="/favicon-192x192.png">
-		<link rel="icon" type="image/png" sizes="32x32"    href="/favicon-32x32.png">
-		<link rel="icon" type="image/png" sizes="96x96"    href="/favicon-96x96.png">
-		<link rel="icon" type="image/png" sizes="16x16"    href="/favicon-16x16.png">
-		<title>Happy Birthday!</title>
+	  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, user-scalable=no">
+
+		<!-- SEO -->
+		<meta name="description" content="Farran Mitchell is a female actor in London">
+		<meta name="keywords" content="farran mitchell, farran, mitchell, actor, actress, london, uk, theatre, film, performance, manchester, laurence olivier, laurence olivier bursary, laurence olivier award, award winner, no one wants a pretty girl, next stop zurich, baby blues, benjamin britten, young persons guid to the orchestra, rislings rave reviews, congregation, manchester school of theatre, national youth theatre">
+		<meta name="robots" content="index,follow" />
+
+		<!-- Imported style and font libraries -->
+		<link href='https://fonts.googleapis.com/css?family=Roboto:300,400' rel='stylesheet' type='text/css'>
+		<script src="https://use.fontawesome.com/3eb11a66e8.js"></script>
+
+		<!-- Favicon -->
+		<link rel="icon" sizes="400x400" href="favicon/400.png">
+		<link rel="icon" sizes="192x192" href="favicon/192.png">
+		<link rel="icon" sizes="96x96" href="favicon/96.png">
+		<link rel="icon" sizes="32x32" href="favicon/32.png">
+		<link rel="icon" sizes="16x16" href="favicon/16.png">
+
 		<!--
-
-				Happy Birthday, Farran!
-							- Luke
+			All content copyright Farran Mitchell 2017
+			Site design by Luke Mitchell <hi@lukemitchell.co>
 		-->
-		<style>
-		html, body { margin: 0; padding: 0;}
-		body {
-			background-image: url('./bg.png');
-			font-family: 'Quattrocento', serif;
-		}
-		hr {
-		    border: 0;
-		    height: 1px;
-		    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
-		}
-		#sash {
-			margin-top: 2em;
-			width: 100%;
-		}
-		#content {
-			padding: 1em 0.5em 0.5em 0.5em;
 
-			width: 50%;
-			margin: 0 auto;
-			background: #FF8400;
-			z-index: 1;
-			box-shadow: 0.2em 0.2em 0.1em #888888;
-		}
-		#cake {
-			width: 100%;
-			text-align: center;
-		}
-		#cake img {
-			max-width: 80%;
-		}
-		#footer {
-			padding-top: 0.8em;
-			width: 50%;
-			margin: 0 auto;
-			text-align: center;
-			font-size: 0.8em;
-		}
+		<title>Farran Mitchell</title>
+
+		<style>
+			body {
+				margin: 0;
+				font-family: 'Roboto', sans-serif;
+			}
+
+			#container {
+				display: flex;
+				min-height: 100vh;
+				justify-content: center;
+				align-items: center;
+				-webkit-transition: background-image 0.2s ease-in-out;
+				transition: background-image 0.2s ease-in-out;
+				background-repeat: no-repeat;
+			}
+
+			#box {
+				width: 66vw;
+				max-width: 600px;
+				max-height: 90vh;
+				background-color: rgba(255, 255, 255, 0.8);
+				border-radius: 0.2em;
+				box-shadow: 0.1em 0.3em 2em rgba(0, 0, 0, 0.5);
+				overflow-y: scroll;
+			}
+
+			#content {
+				padding: 3em;
+			}
+
+			#name {
+				font-size: 2em;
+				text-align: center;
+			}
+
+			#subtitle {
+				font-size: 0.8em;
+				text-align: center;
+				font-weight: bold;
+			}
+
+			#buttons {
+				display: flex;
+				flex-direction: row;
+				width: 100%;
+				justify-content: center;
+				align-items: center;
+				text-align: center;
+			}
+
+			p {
+				color: rgba(0, 0, 0, 0.8);
+			}
+
+			.button {
+				margin: 0.5em;
+			}
+
+			.button a {
+				color: rgba(0, 0, 0, 0.6);
+				transition: 0.2s all ease-in-out;
+			}
+
+			.button a:hover {
+				color: black;
+			}
+
+			.background-button {
+				font-size: 2em;
+				margin: 0.5em;
+				color: rgba(255, 255, 255, 0.6);
+			}
+
+			.background-button a {
+				color: rgba(255, 255, 255, 0.6);
+				transition: 0.2s all ease-in-out;
+				text-decoration: none;
+			}
+
+			.background-button a:hover {
+				color: white;
+				text-decoration: none;
+			}
+
+			#spotlight a img {
+				opacity: 0.6;
+				transition: 0.2s all ease-in-out;
+			}
+
+			#spotlight a:hover img {
+				opacity: 1;
+			}
+
+			#spotlight img {
+				margin-top: 0.35em;
+				width: 1.2em;
+				height: 1.2em;
+			}
+
+			#portrait-container {
+				text-align: center;
+				width: 30vh;
+				margin: 0 auto 1em;
+			}
+
+			#portrait {
+				width: 30vh;
+				height: 30vh;
+				border-radius: 50%;
+				background: url('images/headshot-640.jpg') no-repeat;
+				background-size: cover;
+				box-shadow: 0.1em 0.3em 2em rgba(0, 0, 0, 0.5);
+			}
+
+			@media screen and (max-width: 460px) {
+				#box {
+					max-width: 80vw;
+					margin-top: 5vw;
+				}
+
+				#content {
+					padding: 1.5em;
+				}
+			}
+
+			@media screen and (max-width: 640px) {
+				#container {
+					background-color: #888;
+					background-image: url('images/headshot-640.jpg');
+				}
+
+				#portrait {
+					visibility: hidden;
+					display: none;
+				}
+			}
+
+			@media screen and (min-width: 641px) {
+				#container {
+					background-color: black;
+					background-position: bottom right;
+					background-image: url('images/tomorrow-1024.jpg');
+				}
+			}
 		</style>
+
+		<script type="text/javascript">
+			var currentBackground = 0;
+			var backgrounds = [
+				'images/headshot-640.jpg',
+				'images/tomorrow-1024.jpg'
+			];
+
+			function changeBackground(reverse) {
+				if (reverse) {
+					if (currentBackground <= 0) {
+						currentBackground = backgrounds.length - 1;
+					} else {
+						currentBackground--;
+					}
+				} else {
+					if (currentBackground >= (backgrounds.length - 1)) {
+						currentBackground = 0;
+					} else {
+						currentBackground++;
+					}
+				}
+				document.getElementById('container').style["background-image"] = "url(\'" + backgrounds[currentBackground] + "\')";
+			}
+
+			function cycleBackgrounds() {
+				changeBackground();
+				setTimeout(cycleBackgrounds, 5000);
+			}
+		</script>
 	</head>
 	<body>
-		<div id="sash"></div>
-		<div id="content">
-			<h1>Happy Birthday, Farran!</h1>
-			<hr />
-			<p>This is yours for when you want to do something with it. The world is growing and you never know when someone might borrow your name!</p>
-			<div id="cake"><img src="./cake.gif" title="Happy Birthday!"></img></div>
+		<div id="container">
+			<!-- Uncomment to enable changing background image -->
+			<!-- <div class="background-button" id="left" onclick="changeBackground(true)">
+				<a href="#" title="Show the previous photo">‹</a>
+			</div> -->
+			<div id="box">
+				<div id="content">
+					<div id="portrait-container">
+						<div id="portrait"></div>
+					</div>
+					<div id="name">Farran Mitchell</div>
+					<div id="subtitle">BA (Hons) Acting</div>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+					<div id="buttons">
+						<div class="button" id="photos">
+							<a href="#" title="View photographs of Farran and her acting">
+								<i class="fa fa-camera-retro fa-lg" aria-hidden="true"></i>
+							</a>
+						</div>
+						<div class="button" id="twitter">
+							<a href="https://twitter.com/farranmitchell" title="Visit Farran on Twitter">
+								<i class="fa fa-twitter fa-lg" aria-hidden="true"></i>
+							</a>
+						</div>
+						<div class="button" id="email">
+							<a href="mailto:farranmitchell@hotmail.com" title="Send Farran and email">
+								<i class="fa fa-envelope-o fa-lg" aria-hidden="true"></i>
+							</a>
+						</div>
+						<div class="button" id="spotlight">
+							<a href="https://www.spotlight.com/interactive/cv/0939-5641-6557" title="Farran's profile on Spotlight">
+								<img src="icons/spotlight.svg" />
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- Uncomment to enable changing background image -->
+			<!-- <div class="background-button" id="right" onclick="changeBackground()">
+				<a href="#" title="Show the next photo">›</a>
+			</div> -->
 		</div>
-		<footer id="footer">Website &copy; Farran Mitchell, 2016</footer>
-		<div id="sash"></div>
 	</body>
 </html>
